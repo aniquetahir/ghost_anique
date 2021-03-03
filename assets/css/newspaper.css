@@ -1,11 +1,29 @@
+@font-face {
+    font-family: "Goudy Initialen";
+    src: url("GoudyInitialen.woff") format("woff"),
+        url("GoudyInitialen.woff2") format("woff2"),
+        url("GoudyInitialen.ttf") format("truetype");
+}
+
+p::first-letter {
+    font-family: "Goudy Initialen";
+    font-size: 1000%;
+    float: left;
+    text-transform: capitalize;
+}
 body{
-    font-family: 'Droid Serif', serif;
-    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+    font-size: 19px;
     color: #2f2f2f;
     background-color: #f9f7f1;
 }
+
+.headerobjectswrapper{
+    padding: 2em;
+}
+
 header{
-    font-family: 'Playfair Display', serif;
+    font-family: 'EB Garamond', serif;
     font-weight: 900;
     font-size: 80px;
     text-transform: uppercase;
