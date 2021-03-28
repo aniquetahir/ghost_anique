@@ -4,12 +4,24 @@
         url("GoudyInitialen.woff2") format("woff2"),
         url("GoudyInitialen.ttf") format("truetype");
 }
+.post-excerpt{
+    display: block;
+}
 
-p::first-letter {
+.headline-link{
+    color: black !important;
+}
+.headline-link:hover{
+    text-decoration: none !important;
+}
+
+.post-excerpt > p:nth-of-type(1)::first-letter {
     font-family: "Goudy Initialen";
-    font-size: 1000%;
+    padding: 0 .3rem;
+    margin: 0 .3rem 0 0;
+    font-size: 9rem;
     float: left;
-    text-transform: capitalize;
+    line-height: 1;
 }
 body{
     font-family: 'EB Garamond', serif;
@@ -40,6 +52,60 @@ p{
     position: relative;
 }
 
+.content-grid {
+    padding: 1em !important;
+}
+
+.cweatherforcastbox {
+    border: 3px double #2f2f2f;
+    padding: 10px 15px 10px 15px;
+    line-height: 20px;
+}
+
+.uk-navbar-item > .cweatherforcastbox {
+    font-family: 'Playfair Display', serif;
+    font-size: xx-large;
+    font-weight: 800;
+    color: black;
+    font-style: italic;
+    border: none;
+}
+
+.post-nav {
+    border: double;
+    margin: 3px !important;
+}
+
+.nav-link > a{
+    font-family: 'Playfair Display', serif !important;
+}
+
+.uk-logo, .uk-navbar-nav {
+    font-family: "EB Garamond", serif !important;
+}
+.uk-navbar-item > .uk-divider-vertical {
+    height: 2em;
+}
+
+.uk-nav-default{
+    text-align: left;
+}
+.pagination{
+    text-align: center;
+}
+.headline .author-profile-image {
+    width: 2em;
+}
+
+.uk-nav > .uk-active{
+    font-weight: 600;
+}
+
+.uk-nav a{
+    color: unset;
+    text-decoration: underline;
+}
+
 .flower {
     column-width: 13em;
     column-gap: 1em;
@@ -59,7 +125,7 @@ p{
 .nvf{
     overflow: auto;
 }
-.weatherforcastbox{
+.hweatherforcastbox{
     position: relative;
     width: 12%;
     left: 10px;
@@ -69,6 +135,7 @@ p{
     display: inline-block;
     margin: 0 50px 20px -360px;
 }
+
 .content{
     font-size: 0;
     line-height: 0;
@@ -269,7 +336,7 @@ p{
 /*________________________________________________________________________________________________________________________________*/
 /*MEDIAQUERIES*/
 @media only all and (max-width: 1300px) {
-    .weatherforcastbox{
+    .hweatherforcastbox{
         display: none;
     }
 

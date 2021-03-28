@@ -1,0 +1,40 @@
+{{#if isSecondary}}
+                <ul class="uk-navbar-nav">
+                    {{#foreach navigation}}
+                        <li class="{{#if current}}uk-active{{/if}} {{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+                                <a href="{{url absolute="true"}}">{{label}}</a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+
+{{else}}
+    {{#is "post"}}
+        <ul class="uk-navbar-nav post-nav">
+            {{#foreach navigation}}
+                <li class="nav-link {{#if current}}uk-active{{/if}} {{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+                    <a href="{{url absolute="true"}}">{{label}}</a>
+                </li>
+            {{/foreach}}
+        </ul>
+    {{else}}
+        <ul class="uk-nav uk-nav-default" role="menu">
+            {{#foreach navigation}}
+                <li class="{{#if current}}uk-active{{/if}} {{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-expand" uk-leader>{{label}}</div>
+                        <a href="{{url absolute="true"}}">link</a>
+                    </div>
+                </li>
+            {{/foreach}}
+            <li class="uk-nav-divider"></li>
+            <li>
+                {{#unless @labs.members}}
+                    <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">
+                        <span uk-icon="rss"></span></a>
+                {{/unless}}
+            </li>
+
+        </ul>
+    {{/is}}
+
+{{/if}}

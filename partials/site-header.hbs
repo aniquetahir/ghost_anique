@@ -1,5 +1,45 @@
-<div class="outer site-nav-main">
-    <div class="inner">
-        {{> "site-nav"}}
+
+<nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar>
+    <div class="uk-navbar-center">
+
+        <div class="uk-navbar-center-left"><div>
+            <div class="uk-navbar-item">
+                {{> "site-nav"}}
+                <hr class="uk-divider-vertical" />
+            </div>
+
+            <ul class="uk-navbar-nav">
+
+<!--                <li class="uk-active"><a href="#">Active</a></li>-->
+<!--                <li>-->
+<!--                    <a href="#">Parent</a>-->
+<!--                    <div class="uk-navbar-dropdown">-->
+<!--                        <ul class="uk-nav uk-navbar-dropdown-nav">-->
+<!--                            <li class="uk-active"><a href="#">Active</a></li>-->
+<!--                            <li><a href="#">Item</a></li>-->
+<!--                            <li><a href="#">Item</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </li>-->
+            </ul>
+        </div></div>
+        <a class="uk-navbar-item uk-logo" href="{{@site.url}}"><b>{{@site.title}}</b></a>
+        <div class="uk-navbar-center-right">
+            {{#if @site.navigation}}
+                <div class="uk-navbar-item">
+                    {{navigation}}
+                </div>
+            {{/if}}
+<!--            <ul class="uk-navbar-nav">-->
+<!--                <li><a href="#">Item</a></li>-->
+<!--            </ul>-->
+        </div>
+
     </div>
-</div>
+</nav>
+<hr class="uk-divider-icon">
+<!--<div class="outer site-nav-main">-->
+<!--    <div class="inner">-->
+<!--        {{> "site-nav"}}-->
+<!--    </div>-->
+<!--</div>-->
